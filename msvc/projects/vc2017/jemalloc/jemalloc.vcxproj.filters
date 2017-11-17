@@ -91,5 +91,8 @@
     <ClCompile Include="..\..\..\..\src\log.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dotnet_interop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -63,6 +63,7 @@
     <ClCompile Include="..\..\..\..\src\ticker.c" />
     <ClCompile Include="..\..\..\..\src\tsd.c" />
     <ClCompile Include="..\..\..\..\src\witness.c" />
+    <ClCompile Include="dotnet_interop.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8D6BB292-9E1C-413D-9F98-4864BDC1514A}</ProjectGuid>
@@ -239,6 +240,9 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)jemalloc*.dll $(OutDir)netcoreapp2.0</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-static|x64'">
     <ClCompile>
