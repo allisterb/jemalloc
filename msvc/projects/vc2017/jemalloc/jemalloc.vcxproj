@@ -65,6 +65,9 @@
     <ClCompile Include="..\..\..\..\src\witness.c" />
     <ClCompile Include="dotnet_interop.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dotnet_interop.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8D6BB292-9E1C-413D-9F98-4864BDC1514A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -239,6 +242,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_linker.pdb</ProgramDatabaseFile>
     </Link>
     <PostBuildEvent>
       <Command>copy $(OutDir)jemalloc*.dll $(OutDir)netcoreapp2.0</Command>
